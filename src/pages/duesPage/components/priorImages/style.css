@@ -1,0 +1,13 @@
+.prior-imports-table th,
+.prior-imports-table td {
+  padding: 10px;
+  text-align: left;
+}
+.prior-imports-table th:not(:last-child),
+.prior-imports-table td:not(:last-child) {
+  border-right: 1px solid #1b7398;
+}
+
+.prior-imports-table tbody tr:nth-child(even) {
+  background-color: #d1e3ea;
+}

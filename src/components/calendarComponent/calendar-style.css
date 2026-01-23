@@ -1,0 +1,76 @@
+.calendar-container {
+  width: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  border: 1px solid #010d4a;
+  background-color: white;
+}
+
+/* Header (Month + Arrows) */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2f396b;
+  color: white;
+  padding: 3px;
+}
+
+/* Arrow buttons */
+.calendar-header button {
+  /* background-color: #1b7398; */
+  border: none;
+  color: #1b7398;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 30px;
+  border-radius: 4px;
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+}
+
+.calendar-header button:hover {
+  opacity: 0.9;
+}
+
+/* Grid layout */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* gap: 4px; */
+}
+
+/* Day labels (Sun to Sat) */
+.calendar-day.header {
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #1b7398;
+  letter-spacing: 3px;
+  @media (max-width: 767px) {
+    letter-spacing: inherit;
+  }
+}
+
+/* Calendar day numbers (1–30) */
+.calendar-day {
+  text-align: right;
+  padding: 8px;
+  font-size: 12px;
+  background-color: white;
+  color: black;
+  outline: 0.5px solid #ccc; /* thin grid line without doubling */
+  box-sizing: border-box;
+}
+
+/* Highlight today */
+.calendar-day.today {
+  background-color: #ffdfaf;
+  /* border-radius: 50%; */
+}
+
+/* Empty cells before first day of the month */
+.calendar-day.empty {
+  visibility: hidden;
+}
