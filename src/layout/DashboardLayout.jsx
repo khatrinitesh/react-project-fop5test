@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { sidebarNavigation } from "../constants/constants";
 import { FiMenu } from "react-icons/fi";
 import FooterSection from "./footerSection/FooterSection";
@@ -13,10 +13,10 @@ const DashboardLayout = ({ children }) => {
   };
 
   return (
-    <div className="min-h-screen lg:h-screen flex desktop:overflow-hidden">
+    <div className="min-h-screen lg:h-full flex desktop:overflow-hidden">
       {/* Sidebar */}
       {sidebarOpen && (
-        <aside className="w-[200px] min-h-[100dvh] bg-color1 text-white p-[5px] bg-[var(--color1)]">
+        <aside className="w-[250px] min-h-[100dvh] bg-color1 text-white p-[5px] bg-[var(--color1)]">
           <div className="logoBlock">
             <img
               src="/img/logo-dashboard.png"
@@ -44,20 +44,38 @@ const DashboardLayout = ({ children }) => {
           </div>
 
           {/* Right Side: Logo */}
-          <div className="flex items-center gap-[10px]">
+          <div className=" flex flex-col items-end">
+            <ul className="listTop flex gap-2 items-center">
+              <li>
+                <NavLink
+                  className="text-white text-xs font-semibold"
+                  to="mailto:fop5-jira@velarium.com"
+                >
+                  Contact Support
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="text-white text-xs font-semibold"
+                  to="/login"
+                >
+                  Log out
+                </NavLink>
+              </li>
+            </ul>
             <div className="profileBlock  items-center gap-[10px] hidden sm:flex">
               <span className="subtitle ext-smallDescription montserrat-regular ">
                 Welcome
               </span>
               <span className="text-[var(--color6)] text-smallDescription montserrat-regular">
-                Joel Rosen
+                Velarium Pm
               </span>
+              <img
+                src="/img/logo.png" // adjust path as needed
+                alt="Logo"
+                className="h-8 w-8 object-contain"
+              />
             </div>
-            <img
-              src="/img/logo.png" // adjust path as needed
-              alt="Logo"
-              className="h-8 w-8 object-contain"
-            />
           </div>
         </header>
         {/* Main Page Content */}

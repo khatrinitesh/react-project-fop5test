@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 // layout
 import DashboardLayout from "./../layout/DashboardLayout";
-// pages
+// old pages
 import LoginPage from "../pages/loginPage/LoginPage";
 import DashboardPage from "./../pages/dashboardPage/DashboardPage";
 import CalendarPage from "../pages/calendarPage/CalendarPage";
@@ -26,6 +26,23 @@ import MatterDetailsPage from "./../pages/matterDetailsPage/MatterDetailsPage";
 import MembersProfilePage from "../pages/membersProfilePage/MembersProfilePage";
 import ManageRolesPage from "../pages/manageRolesPage/ManageRolesPage";
 import RoleAccess from "../pages/manageRolesPage/components/RolesAccess/RoleAccess";
+
+// ✅ Module pages
+import CateringCalendar from "../pages/modules/CateringCalendar";
+import ChangeFile from "../pages/modules/ChangeFile";
+import AddPayment from "../pages/modules/AddPayment";
+import GenerateExceptions from "../pages/modules/GenerateExceptions";
+import AddOrderPayment from "../pages/modules/AddOrderPayment";
+import AddEnrollment from "../pages/modules/AddEnrollment";
+import ChangeRateCode from "../pages/modules/ChangeRateCode";
+import ImportModule from "../pages/modules/ImportModule";
+import ChangeEnrollments from "../pages/modules/ChangeEnrollments";
+import SearchBooster from "../pages/modules/SearchBooster";
+import MembersModule from "../pages/modules/Members";
+import GenerateChecks from "../pages/modules/GenerateChecks";
+import RHBJPTReconciliation from "../pages/modules/RHBJPTReconciliation";
+import ClearFlags from "../pages/modules/ClearFlags";
+import CityExportFile from "../pages/modules/CityExportFile";
 
 // ✅ Helper component for protected routes
 const PrivateRoute = ({ children }) => {
@@ -235,6 +252,158 @@ const RoutesPath = () => {
             <PrivateRoute>
               <DashboardLayout>
                 <CalendarPage />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+
+        {/* ✅ Module Pages */}
+        <Route
+          path="/modules/catering-calendar"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <CateringCalendar />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/change-file"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <ChangeFile />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/add-payment"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <AddPayment />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/generate-exceptions"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <GenerateExceptions />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/add-order-payment"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <AddOrderPayment />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/add-enrollment"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <AddEnrollment />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/change-rate-code"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <ChangeRateCode />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/import-modules"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <ImportModule />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/change-enrollments"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <ChangeEnrollments />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/search-booster-member"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <SearchBooster />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/members"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <MembersModule />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/generate-checks"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <GenerateChecks />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/rhbjpt-reconciliation"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <RHBJPTReconciliation />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/clear-flags"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <ClearFlags />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/modules/city-export-file"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <CityExportFile />
               </DashboardLayout>
             </PrivateRoute>
           }

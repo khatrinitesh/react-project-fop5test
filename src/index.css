@@ -1,173 +1,210 @@
 @import "tailwindcss";
 @font-face {
-    font-family: "montserrat-regular";
-    src: url("../fonts/montserrat-regular.eot");
-    src: url("../fonts/montserrat-regular.eot") format("embedded-opentype"), url("../fonts/montserrat-regular.woff2") format("woff2"), url("../fonts/montserrat-regular.woff") format("woff"), url("../fonts/montserrat-regular.ttf") format("truetype"), url("../fonts/montserrat-regular.svg#montserrat-regular") format("svg");
+  font-family: "montserrat-regular";
+  src: url("../fonts/montserrat-regular.eot");
+  src:
+    url("../fonts/montserrat-regular.eot") format("embedded-opentype"),
+    url("../fonts/montserrat-regular.woff2") format("woff2"),
+    url("../fonts/montserrat-regular.woff") format("woff"),
+    url("../fonts/montserrat-regular.ttf") format("truetype"),
+    url("../fonts/montserrat-regular.svg#montserrat-regular") format("svg");
 }
 
 @font-face {
-    font-family: "montserrat-medium";
-    src: url("../fonts/montserrat-medium.eot");
-    src: url("../fonts/montserrat-medium.eot") format("embedded-opentype"), url("../fonts/montserrat-medium.woff2") format("woff2"), url("../fonts/montserrat-medium.woff") format("woff"), url("../fonts/montserrat-medium.ttf") format("truetype"), url("../fonts/montserrat-medium.svg#montserrat-medium") format("svg");
+  font-family: "montserrat-medium";
+  src: url("../fonts/montserrat-medium.eot");
+  src:
+    url("../fonts/montserrat-medium.eot") format("embedded-opentype"),
+    url("../fonts/montserrat-medium.woff2") format("woff2"),
+    url("../fonts/montserrat-medium.woff") format("woff"),
+    url("../fonts/montserrat-medium.ttf") format("truetype"),
+    url("../fonts/montserrat-medium.svg#montserrat-medium") format("svg");
 }
 
 @font-face {
-    font-family: "montserrat-semibold";
-    src: url("../fonts/montserrat-semibold.eot");
-    src: url("../fonts/montserrat-semibold.eot") format("embedded-opentype"), url("../fonts/montserrat-semibold.woff2") format("woff2"), url("../fonts/montserrat-semibold.woff") format("woff"), url("../fonts/montserrat-semibold.ttf") format("truetype"), url("../fonts/montserrat-semibold.svg#montserrat-semibold") format("svg");
+  font-family: "montserrat-semibold";
+  src: url("../fonts/montserrat-semibold.eot");
+  src:
+    url("../fonts/montserrat-semibold.eot") format("embedded-opentype"),
+    url("../fonts/montserrat-semibold.woff2") format("woff2"),
+    url("../fonts/montserrat-semibold.woff") format("woff"),
+    url("../fonts/montserrat-semibold.ttf") format("truetype"),
+    url("../fonts/montserrat-semibold.svg#montserrat-semibold") format("svg");
 }
 
 @font-face {
-    font-family: "montserrat-bold";
-    src: url("../fonts/montserrat-bold.eot");
-    src: url("../fonts/montserrat-bold.eot") format("embedded-opentype"), url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff"), url("../fonts/montserrat-bold.ttf") format("truetype"), url("../fonts/montserrat-bold.svg#montserrat-bold") format("svg");
+  font-family: "montserrat-bold";
+  src: url("../fonts/montserrat-bold.eot");
+  src:
+    url("../fonts/montserrat-bold.eot") format("embedded-opentype"),
+    url("../fonts/montserrat-bold.woff2") format("woff2"),
+    url("../fonts/montserrat-bold.woff") format("woff"),
+    url("../fonts/montserrat-bold.ttf") format("truetype"),
+    url("../fonts/montserrat-bold.svg#montserrat-bold") format("svg");
 }
 
 :root {
-    --color1: #010d4a;
-    --color2: #b5f5f8;
-    --color3: #eb973a;
-    --color4: #a7e3eb;
-    --color5: #1b7398;
-    --color6: #b5f5f8;
-    --color7: #eaf2f6;
-    --color8: #ffdfaf;
-    --color9: #b2bcc7;
-    --ff-montserrat-regular: "montserrat-regular";
-    --ff-montserrat-medium: "montserrat-medium";
-    --ff-montserrat-semibold: "montserrat-semibold";
-    --ff-montserrat-bold: "montserrat-bold";
-    --headTitle: 2rem;
-    --subTitle: 1.5rem;
-    --smallSubTitle: 1.125rem;
-    /*18px*/
-    --description: 1rem;
-    --small-description: 0.875rem;
-    --extra-small-description: 0.75rem;
+  --color1: #010d4a;
+  --color2: #b5f5f8;
+  --color3: #eb973a;
+  --color4: #a7e3eb;
+  --color5: #1b7398;
+  --color6: #b5f5f8;
+  --color7: #eaf2f6;
+  --color8: #ffdfaf;
+  --color9: #b2bcc7;
+  --ff-montserrat-regular: "montserrat-regular";
+  --ff-montserrat-medium: "montserrat-medium";
+  --ff-montserrat-semibold: "montserrat-semibold";
+  --ff-montserrat-bold: "montserrat-bold";
+  --headTitle: 2rem;
+  --subTitle: 1.5rem;
+  --smallSubTitle: 1.125rem;
+  /*18px*/
+  --description: 1rem;
+  --small-description: 0.875rem;
+  --extra-small-description: 0.75rem;
 }
 
 body {
-    font-family: var(--ff-montserrat-regular);
-    font-size: 16px;
-    overflow-x: hidden;
+  font-family: var(--ff-montserrat-regular);
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.verticalScrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.verticalScrollbar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #7a99d9;
+}
+
+.verticalScrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, #44b7e4),
+    color-stop(0.72, #44b7e4),
+    color-stop(0.86, #44b7e4)
+  );
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .montserrat-regular {
-    font-family: var(--ff-montserrat-regular);
+  font-family: var(--ff-montserrat-regular);
 }
 
 .montserrat-medium {
-    font-family: var(--ff-montserrat-medium);
+  font-family: var(--ff-montserrat-medium);
 }
 
 .montserrat-semibold {
-    font-family: var(--ff-montserrat-semibold);
+  font-family: var(--ff-montserrat-semibold);
 }
 
 .montserrat-bold {
-    font-family: var(--ff-montserrat-bold);
+  font-family: var(--ff-montserrat-bold);
 }
-
 
 /* 32px */
 
 .text-headTitle {
-    font-size: var(--headTitle);
+  font-size: var(--headTitle);
 }
-
 
 /* 24px */
 
 .text-subTitle {
-    font-size: var(--subTitle);
+  font-size: var(--subTitle);
 }
 
 .text-smallSubTitle {
-    font-size: var(--smallSubTitle);
+  font-size: var(--smallSubTitle);
 }
-
 
 /* 16px */
 
 .text-description {
-    font-size: var(--description);
+  font-size: var(--description);
 }
-
 
 /* 14px */
 
 .text-smallDescription {
-    font-size: var(--small-description);
+  font-size: var(--small-description);
 }
-
 
 /* 12px */
 
 .text-extraSmallDescription {
-    font-size: var(--extra-small-description);
+  font-size: var(--extra-small-description);
 }
 
 .text-color1 {
-    color: var(--color1);
+  color: var(--color1);
 }
 
 .text-color2 {
-    color: var(--color2);
+  color: var(--color2);
 }
 
 .text-color3 {
-    color: var(--color3);
+  color: var(--color3);
 }
 
 .text-color4 {
-    color: var(--color4);
+  color: var(--color4);
 }
 
 .text-color5 {
-    color: var(--color5);
+  color: var(--color5);
 }
 
 .text-color6 {
-    color: var(--color6);
+  color: var(--color6);
 }
 
 .text-color7 {
-    color: var(--color7);
+  color: var(--color7);
 }
 
 .body-login-bg {
-    background: url("../img/bg-login.jpg") no-repeat center center fixed;
-    background-size: cover;
+  background: url("../img/bg-login.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .vertical-scrollbar::-webkit-scrollbar {
-    width: 13px;
+  width: 13px;
 }
 
 .vertical-scrollbar::-webkit-scrollbar-track {
-    background: #dae2e6;
-    border-left: 1px solid #1b7398;
-    /* Border on left side of track */
-    border-right: 1px solid #1b7398;
-    /* Border on left side of track */
+  background: #dae2e6;
+  border-left: 1px solid #1b7398;
+  /* Border on left side of track */
+  border-right: 1px solid #1b7398;
+  /* Border on left side of track */
 }
 
 .vertical-scrollbar::-webkit-scrollbar-thumb {
-    background: #bdd1da;
-    border: 1px solid #1b7398;
+  background: #bdd1da;
+  border: 1px solid #1b7398;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
+  display: none;
+  -webkit-appearance: none;
 }
-
 
 /* Hide the native text placeholder in WebKit browsers */
 
@@ -175,23 +212,21 @@ input[type="date"]::-webkit-datetime-edit-text,
 input[type="date"]::-webkit-datetime-edit-month-field,
 input[type="date"]::-webkit-datetime-edit-day-field,
 input[type="date"]::-webkit-datetime-edit-year-field {
-    color: transparent;
-    /* hides the default dd-mm-yyyy text */
+  color: transparent;
+  /* hides the default dd-mm-yyyy text */
 }
-
 
 /* Firefox */
 
 input[type="date"]::-moz-placeholder {
-    color: transparent;
+  color: transparent;
 }
 
 .calendar-grid .calendar-day {
-    /* border-top: 1px solid #ccc !important;
+  /* border-top: 1px solid #ccc !important;
   border-left: 1px solid #ccc !important; */
-    border: 0;
+  border: 0;
 }
-
 
 /* .calendar-grid .calendar-day:last-child {
   border-bottom: 1px solid #ccc !important;
