@@ -195,11 +195,11 @@ export const sidebarNavigation = [
         icon: FaSearch,
         path: "/modules/search-booster-member",
       },
-      {
-        label: "Members",
-        icon: FaUserFriends,
-        path: "/modules/members",
-      },
+      // {
+      //   label: "Members",
+      //   icon: FaUserFriends,
+      //   path: "/modules/members",
+      // },
       {
         label: "Generate Checks",
         icon: FaPrint,

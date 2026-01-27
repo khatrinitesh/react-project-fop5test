@@ -99,10 +99,10 @@ const SearchBooster = () => {
 
             {/* Buttons */}
             <div className="flex gap-3 mt-2">
-              <div className="w-[120px]">
+              <div className="">
                 <Button type="submit" label="Search" className="!mx-0" />
               </div>
-              <div className="w-[120px]">
+              <div className="">
                 <Button
                   type="button"
                   label="Clear"
@@ -110,11 +110,6 @@ const SearchBooster = () => {
                   onClick={handleClear}
                 />
               </div>
-            </div>
-
-            {/* Version */}
-            <div className="mt-6 text-center text-[11px] text-gray-500">
-              Version 1.3.2
             </div>
           </form>
         </div>
