@@ -45,7 +45,7 @@ const AddPayment = () => {
               <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
                 <label
                   htmlFor="payrollNumber"
-                  className="text-xs montserrat-medium md:w-[40%] text-[#010d4a] mb-1"
+                  className="text-xs montserrat-medium w-1/2 md:w-[40%] text-[#010d4a] mb-1"
                 >
                   Payroll #:
                 </label>
@@ -63,7 +63,7 @@ const AddPayment = () => {
               <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
                 <label
                   htmlFor="payPeriodType"
-                  className="text-xs montserrat-medium md:w-[40%] text-[#010d4a] mb-1"
+                  className="text-xs montserrat-medium w-full md:w-[40%] text-[#010d4a] mb-1"
                 >
                   Pay period type:
                 </label>
@@ -86,7 +86,7 @@ const AddPayment = () => {
               <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
                 <label
                   htmlFor="payPeriod"
-                  className="text-xs montserrat-medium md:w-[40%] text-[#010d4a] mb-1"
+                  className="text-xs montserrat-medium w-full md:w-[40%] text-[#010d4a] mb-1"
                 >
                   Pay period:
                 </label>
@@ -109,7 +109,7 @@ const AddPayment = () => {
               <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
                 <label
                   htmlFor="dateOfReceipt"
-                  className="text-xs montserrat-medium md:w-[40%] text-[#010d4a] mb-1"
+                  className="text-xs montserrat-medium w-full md:w-[40%] text-[#010d4a] mb-1"
                 >
                   Date of Receipt:
                 </label>
@@ -127,7 +127,7 @@ const AddPayment = () => {
               <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
                 <label
                   htmlFor="billPeriod"
-                  className="text-xs montserrat-medium md:w-[40%] text-[#010d4a] mb-1"
+                  className="text-xs montserrat-medium w-full md:w-[40%] text-[#010d4a] mb-1"
                 >
                   Bill Period:
                 </label>
@@ -145,7 +145,7 @@ const AddPayment = () => {
               <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
                 <label
                   htmlFor="accountNumber"
-                  className="text-xs montserrat-medium md:w-[40%] text-[#010d4a] mb-1"
+                  className="text-xs montserrat-medium w-full md:w-[40%] text-[#010d4a] mb-1"
                 >
                   Account Number:
                 </label>
@@ -163,7 +163,7 @@ const AddPayment = () => {
               <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
                 <label
                   htmlFor="checkNumber"
-                  className="text-xs montserrat-medium md:w-[40%] text-[#010d4a] mb-1"
+                  className="text-xs montserrat-medium w-full md:w-[40%] text-[#010d4a] mb-1"
                 >
                   Check #:
                 </label>
@@ -181,7 +181,7 @@ const AddPayment = () => {
               <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
                 <label
                   htmlFor="totalPaid"
-                  className="text-xs montserrat-medium md:w-[40%] text-[#010d4a] mb-1"
+                  className="text-xs montserrat-medium w-full md:w-[40%] text-[#010d4a] mb-1"
                 >
                   Total $ Paid:
                 </label>
@@ -201,7 +201,7 @@ const AddPayment = () => {
               <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
                 <label
                   htmlFor="method"
-                  className="text-xs montserrat-medium md:w-[40%] text-[#010d4a] mb-1"
+                  className="text-xs montserrat-medium w-full md:w-[40%] text-[#010d4a] mb-1"
                 >
                   Method:
                 </label>
@@ -222,7 +222,7 @@ const AddPayment = () => {
 
               {/* Entered By */}
               <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
-                <label className="text-xs montserrat-medium md:w-[40%] text-[#010d4a] mb-1">
+                <label className="text-xs montserrat-medium w-full md:w-[40%] text-[#010d4a] mb-1">
                   Entered By:
                 </label>
                 <div className="w-full h-[35px] flex items-center border border-[#1b7398] rounded px-2 py-[4px] bg-white  text-xs montserrat-medium text-[#010d4a]">

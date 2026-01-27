@@ -43,7 +43,7 @@ const CateringCalendar = () => {
       </SectionTitleComponent>
       <div className="innerContent p-5">
         {/* Controls */}
-        <div className="flex gap-5 justify-end my-5">
+        <div className="flex md:flex-row flex-col gap-5 justify-end my-5">
           <Button className="!mx-0" label="Add 7C Lounge Event" />
 
           {/* Month & Year Filters */}

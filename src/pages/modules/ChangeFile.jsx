@@ -25,9 +25,9 @@ const ChangeFile = () => {
 
       <div className="innerContent p-5">
         <div className="w-full bg-[#edf4f7] p-[10px] ">
-          <div className="grid gap-5 boxContent max-w-1/2">
-            <div className="flex items-center justify-between px-1 rounded-[10px] w-full">
-              <label className="text-xs montserrat-medium md:w-[30%] text-[#010d4a] mb-1">
+          <div className="grid gap-5 boxContent md:max-w-1/2">
+            <div className="flex  items-center justify-between px-1 rounded-[10px] gap-2 w-full">
+              <label className="text-xs montserrat-medium w-full md:w-[30%] text-[#010d4a] mb-1">
                 Export Type:
               </label>
               <div className="w-full">
