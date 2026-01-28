@@ -24,7 +24,7 @@ const MailTabbed = () => {
       {/* Tabs Navigation */}
       <ul className="listTab flex flex-col md:flex-row  border-b border-gray-200">
         {tabsData.map((tab) => (
-          <li key={tab.id} className="">
+          <li key={tab.id} className="cursor-pointer">
             <a
               onClick={() => setActiveTab(tab.id)}
               className={`block px-4 py-[7px] border border-[#010d4a]  text-extraSmallDescription montserrat-medium cursor-pointer transition-colors

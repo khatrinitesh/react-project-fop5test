@@ -6,89 +6,126 @@ import MemberComponent from "../../components/memberComponent/MemberComponent";
 import Button from "../../components/button/Button";
 import TableFormatComponent from "../../components/tableFormatComponent/TableFormatComponent";
 import {
+  announcementsData,
   deadlinesData,
   membersData,
   tableHeaders,
   tasksData,
+  tasksSummaryData,
 } from "../../constants/constants";
+import FieldInput from "../../components/fieldInput/FieldInput";
 
 const DashboardPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
     const isAuth = localStorage.getItem("isAuthenticated");
-    if (!isAuth) {
-      navigate("/login");
-    }
+    if (!isAuth) navigate("/login");
   }, [navigate]);
 
-  const handleClick = () => {
-    console.log("clicked");
+  const handleSearch = () => {
+    console.log("Search clicked");
   };
   return (
     <>
-      <div className="dashboardPage m-[20px]">
-        <div className="innerContent grid gap-[30px] w-full">
-          <CardComponent />
-          <div className="grid gap-[20px] grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-start">
-            <div className="leftBox grid  gap-[10px]">
-              <SearchComponent
-                placeholder="Quick Name Lookup"
-                maxLength={50}
-                disabled={false}
-                className="w-full md:max-w-[50%] 2xl:max-w-[40%] rounded-full"
-              />
-
-              <MemberComponent />
-              <div className="btnBlock flex items-start  w-full">
-                <Button
-                  label="Search"
-                  className="!mx-0"
-                  onClick={handleClick}
-                  variant="color1"
-                />
+      <div className="p-5 bg-[#e6edf7] ">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6">
+          {/* LEFT SIDEBAR */}
+          <div className="space-y-4">
+            {/* Messages Box */}
+            <div className="border border-blue-700 bg-white">
+              <div className="bg-blue-200 px-3 py-2 font-semibold text-sm">
+                📬 You have no new messages
               </div>
             </div>
-            <div className="rightBox">
-              <span className="mt-[8px] block"></span>
+
+            {/* Recent Announcements */}
+            <div className="border border-blue-700 bg-white">
+              <div className="bg-blue-200 px-3 py-2 font-semibold text-sm">
+                Recent Announcements
+              </div>
               <TableFormatComponent
-                caption="Recently Accessed Members"
-                colorKey="color1"
-                thead={tableHeaders.members}
-                rows={membersData}
+                thead={["Title", "Posted"]}
+                rows={announcementsData}
+                variant="classic"
+              />
+            </div>
+
+            {/* Tasks */}
+            <div className="border border-blue-700 bg-white">
+              <div className="bg-blue-200 px-3 py-2 font-semibold text-sm">
+                Tasks
+              </div>
+              <TableFormatComponent
+                thead={["Status", "Tasks"]}
+                rows={tasksSummaryData}
+                variant="classic"
               />
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
-            <div className="boxGrid grid gap-[10px]">
-              <TableFormatComponent
-                caption="Upcoming Grievance Tasks"
-                colorKey="color2"
-                thead={tableHeaders.tasks}
-                rows={tasksData}
-              />
-              <div className="btnBlock flex items-start  w-full">
-                <Button
-                  label="Open Grievances"
-                  className="!mx-0"
-                  onClick={handleClick}
-                  variant="color2"
-                />
-              </div>
+
+          {/* RIGHT MAIN CONTENT */}
+          <div className="border border-blue-700 bg-white">
+            <div className="bg-blue-200 px-4 py-2 font-semibold text-sm">
+              Members
             </div>
-            <div className="boxGrid grid gap-[10px]">
-              <TableFormatComponent
-                caption="Upcoming Dates & Deadlines"
-                colorKey="color3"
-                thead={tableHeaders.deadlines}
-                rows={deadlinesData}
-              />
-              <div className="btnBlock flex items-start  w-full">
+
+            <div className="p-6 flex flex-col  gap-x-10 gap-y-4 max-w-xl">
+              <div className="flex flex-col md:flex-row gap-2 items-start">
+                {/* Label */}
+                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                  First Name:
+                </label>
+                <FieldInput className="w-full" label="First Name:" />
+              </div>
+              <div className="flex flex-col md:flex-row gap-2 items-start">
+                {/* Label */}
+                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                  Last Name:
+                </label>
+                <FieldInput className="w-full" label="Last Name:" />
+              </div>
+              <div className="flex flex-col md:flex-row gap-2 items-start">
+                {/* Label */}
+                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                  SSN:
+                </label>
+                <FieldInput className="w-full" label="SSN:" />
+              </div>
+              <div className="flex flex-col md:flex-row gap-2 items-start">
+                {/* Label */}
+                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                  Payroll Number:
+                </label>
+                <FieldInput className="w-full" label="Payroll Number:" />
+              </div>
+              <div className="flex flex-col md:flex-row gap-2 items-start">
+                {/* Label */}
+                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                  National Number:
+                </label>
+                <FieldInput className="w-full" label="National Number:" />
+              </div>
+              <div className="flex flex-col md:flex-row gap-2 items-start">
+                {/* Label */}
+                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                  Badge #:
+                </label>
+                <FieldInput className="w-full" label="Badge #:" />
+              </div>
+              <div className="flex flex-col md:flex-row gap-2 items-start">
+                {/* Label */}
+                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                  Emblem #:
+                </label>
+                <FieldInput className="w-full" label="Emblem #:" />
+              </div>
+
+              <div className="md:col-span-2 mt-2">
                 <Button
-                  label="Open Calendar"
-                  className="!mx-0"
-                  onClick={handleClick}
-                  variant="color3"
+                  label="Search"
+                  onClick={handleSearch}
+                  variant="color1"
                 />
               </div>
             </div>

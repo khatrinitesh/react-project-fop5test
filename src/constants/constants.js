@@ -47,7 +47,7 @@ export const sidebarNavigation = [
       {
         label: "Email",
         icon: FaBullhorn,
-        path: "/home/email",
+        path: "/dashboard/email",
       },
     ],
   },
@@ -701,4 +701,16 @@ export const methods = [
   { value: "check", label: "Check" },
   { value: "cash", label: "Cash" },
   { value: "direct-deposit", label: "Direct Deposit" },
+];
+
+export const announcementsData = [
+  ["System Maintenance", "Jan 20, 2026"],
+  ["Holiday Notice", "Jan 15, 2026"],
+];
+
+export const tasksSummaryData = [
+  ["Over Due", "0"],
+  ["Due Today", "0"],
+  ["Due Tomorrow", "0"],
+  ["Total", "0"],
 ];

@@ -1,25 +1,45 @@
-import { FaRegEnvelope } from "react-icons/fa";
-import SectionTitleComponent from "../../components/sectionTitleComponent/SectionTitleComponent";
-import MailTabbed from "./mailTabbed";
+import { useState } from "react";
+import MessagesTab from "./components/MessagesTab";
+import ComposeTab from "./components/ComposeTab";
+import SettingsTab from "./components/SettingsTab";
 
-const MailPage = () => {
+const MailTabbed = () => {
+  const [activeTab, setActiveTab] = useState("messages");
+
+  const tabs = [
+    { id: "messages", label: "Messages" },
+    { id: "compose", label: "Compose" },
+    { id: "settings", label: "Settings" },
+  ];
+
+  const renderTab = () => {
+    if (activeTab === "messages") return <MessagesTab />;
+    if (activeTab === "compose") return <ComposeTab />;
+    if (activeTab === "settings") return <SettingsTab />;
+  };
+
   return (
-    <div className="mailPage ">
-      <div className="innerContent grid gap-[10px] w-full ">
-        <SectionTitleComponent>
-          <FaRegEnvelope className={` text-[20px] text-[var(--color6)]`} />
-          <h2
-            className={`whitespace-nowrap text-[var(--color6)] md:text-smallSubTitle montserrat-regular`}
-          >
-            Mail
-          </h2>
-        </SectionTitleComponent>
-        <div className="py-[20px] px-[20px] md:px-[50px] grid gap-[20px]">
-          <MailTabbed />
-        </div>
-      </div>
+    <div className="bg-[#e6edf7] border border-[#0b2c6b]">
+      {/* Tabs */}
+      <ul className="flex border-b border-[#0b2c6b] bg-[#f2f5ff]">
+        {tabs.map((tab) => (
+          <li key={tab.id}>
+            <button
+              onClick={() => setActiveTab(tab.id)}
+              className={`cursor-pointer text-black font-semibold px-4 py-1 text-xs border-r border-[#0b2c6b]
+                ${activeTab === tab.id ? "bg-[#1b7398] text-white" : "bg-[#f2f5ff] text-black"}
+              `}
+            >
+              {tab.label}
+            </button>
+          </li>
+        ))}
+      </ul>
+
+      {/* Content */}
+      <div className="p-4 bg-white">{renderTab()}</div>
     </div>
   );
 };
 
-export default MailPage;
+export default MailTabbed;

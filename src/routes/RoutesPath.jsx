@@ -81,6 +81,17 @@ const RoutesPath = () => {
           }
         />
 
+        <Route
+          path="/dashboard/email"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <MailPage />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+
         {/* Members parent + child */}
         <Route
           path="/members"
