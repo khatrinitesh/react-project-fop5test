@@ -57,8 +57,8 @@ export const sidebarNavigation = [
     icon: FaPlusCircle,
     children: [
       { label: "Member", icon: FaUser, path: "/new/member" },
-      { label: "One Philly", icon: FaCity, path: "/new/one-philly" },
-      { label: "Matter", icon: FaBriefcase, path: "/new/matter" },
+      { label: "One Philly", icon: FaCity, path: "/new/one-philly-issue" },
+      { label: "Matter", icon: FaBriefcase, path: "/new/legal-matters-search" },
       { label: "Task", icon: FaTasks, path: "/new/task" },
       { label: "Product", icon: FaBox, path: "/new/product" },
       { label: "Meeting", icon: FaHandshake, path: "/new/meeting" },

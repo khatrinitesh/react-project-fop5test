@@ -43,6 +43,9 @@ import GenerateChecks from "../pages/modules/GenerateChecks";
 import RHBJPTReconciliation from "../pages/modules/RHBJPTReconciliation";
 import ClearFlags from "../pages/modules/ClearFlags";
 import CityExportFile from "../pages/modules/CityExportFile";
+import Member from "../pages/new/member";
+import OnePhillyIssue from "../pages/new/OnePhillyIssue";
+import LegalMattersSearch from "../pages/new/LegalMattersSearch";
 
 // ✅ Helper component for protected routes
 const PrivateRoute = ({ children }) => {
@@ -65,10 +68,8 @@ const RoutesPath = () => {
             )
           }
         />
-
         {/* Public Route */}
         <Route path="/login" element={<LoginPage />} />
-
         {/* Protected Routes */}
         <Route
           path="/dashboard"
@@ -80,13 +81,42 @@ const RoutesPath = () => {
             </PrivateRoute>
           }
         />
-
         <Route
           path="/dashboard/email"
           element={
             <PrivateRoute>
               <DashboardLayout>
                 <MailPage />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/new/member"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <Member />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/new/one-philly-issue"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <OnePhillyIssue />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/new/legal-matters-search"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <LegalMattersSearch />
               </DashboardLayout>
             </PrivateRoute>
           }
@@ -123,7 +153,6 @@ const RoutesPath = () => {
             </PrivateRoute>
           }
         />
-
         {/* Grievances parent + child */}
         <Route
           path="/grievances"
@@ -145,7 +174,6 @@ const RoutesPath = () => {
             </PrivateRoute>
           }
         />
-
         {/* Other standalone routes */}
         <Route
           path="/reports"
@@ -267,7 +295,6 @@ const RoutesPath = () => {
             </PrivateRoute>
           }
         />
-
         {/* ✅ Module Pages */}
         <Route
           path="/modules/catering-calendar"
@@ -419,7 +446,6 @@ const RoutesPath = () => {
             </PrivateRoute>
           }
         />
-
         {/* 404 fallback */}
         <Route path="*" element={<div>404 Page Not Found</div>} />
       </Routes>
