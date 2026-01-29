@@ -15,37 +15,33 @@ const OnePhillyIssue = () => {
         </div>
 
         {/* 🔷 Form Section */}
-        <div className="bg-[#efefef] p-6 border-b border-gray-300">
+        <div className="bg-white p-6 ">
           <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-y-4 gap-x-6 text-sm">
-            <label className="font-semibold text-xs text-right md:text-left">
+            <label className="font-semibold text-xs text-left">
               Payroll Number:
             </label>
             <FieldInput className="w-[250px]" />
 
-            <label className="font-semibold text-xs text-right md:text-left">
+            <label className="font-semibold text-xs text-left">
               First Name:
             </label>
             <FieldInput className="w-[250px]" />
 
-            <label className="font-semibold text-xs text-right md:text-left">
+            <label className="font-semibold text-xs text-left">
               Last Name:
             </label>
             <FieldInput className="w-[250px]" />
 
-            <label className="font-semibold text-xs text-right md:text-left">
-              Date:
-            </label>
+            <label className="font-semibold text-xs text-left">Date:</label>
             <div className="flex items-center gap-2">
               <FieldInput className="w-[200px]" type="date" />
               <span className="text-lg">📅</span>
             </div>
 
-            <label className="font-semibold text-xs text-right md:text-left">
-              Issues:
-            </label>
+            <label className="font-semibold text-xs text-left">Issues:</label>
             <textarea className="bg-white resize-none outline-none border border-gray-400 p-2 w-full h-[70px]" />
 
-            <label className="font-semibold text-xs text-right md:text-left">
+            <label className="font-semibold text-xs text-left">
               Billable Hours:
             </label>
             <FieldInput className="w-[120px]" />

@@ -33,16 +33,20 @@ const DashboardPage = () => {
           {/* LEFT SIDEBAR */}
           <div className="space-y-4">
             {/* Messages Box */}
-            <div className="border border-blue-700 bg-white">
-              <div className="bg-blue-200 px-3 py-2 font-semibold text-sm">
-                📬 You have no new messages
+            <div className=" bg-white">
+              <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2 flex items-center gap-2">
+                <h2 className="text-md font-bold text-white">
+                  📬 You have no new messages
+                </h2>
               </div>
             </div>
 
             {/* Recent Announcements */}
-            <div className="border border-blue-700 bg-white">
-              <div className="bg-blue-200 px-3 py-2 font-semibold text-sm">
-                Recent Announcements
+            <div className=" bg-white">
+              <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2 flex items-center gap-2">
+                <h2 className="text-md font-bold text-white">
+                  Recent Announcements
+                </h2>
               </div>
               <TableFormatComponent
                 thead={["Title", "Posted"]}
@@ -52,9 +56,9 @@ const DashboardPage = () => {
             </div>
 
             {/* Tasks */}
-            <div className="border border-blue-700 bg-white">
-              <div className="bg-blue-200 px-3 py-2 font-semibold text-sm">
-                Tasks
+            <div className=" bg-white">
+              <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2 flex items-center gap-2">
+                <h2 className="text-md font-bold text-white">Tasks</h2>
               </div>
               <TableFormatComponent
                 thead={["Status", "Tasks"]}
@@ -65,57 +69,57 @@ const DashboardPage = () => {
           </div>
 
           {/* RIGHT MAIN CONTENT */}
-          <div className="border border-blue-700 bg-white">
-            <div className="bg-blue-200 px-4 py-2 font-semibold text-sm">
-              Members
+          <div className=" bg-white border border-gray-300">
+            <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2 flex items-center gap-2">
+              <h2 className="text-md font-bold text-white">Members</h2>
             </div>
 
             <div className="p-6 flex flex-col  gap-x-10 gap-y-4 max-w-xl">
               <div className="flex flex-col md:flex-row gap-2 items-start">
                 {/* Label */}
-                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                <label className="w-full md:w-[60%] text-xs font-semibold text-[#010d4a] whitespace-nowrap">
                   First Name:
                 </label>
                 <FieldInput className="w-full" label="First Name:" />
               </div>
               <div className="flex flex-col md:flex-row gap-2 items-start">
                 {/* Label */}
-                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                <label className="w-full md:w-[60%] text-xs font-semibold text-[#010d4a] whitespace-nowrap">
                   Last Name:
                 </label>
                 <FieldInput className="w-full" label="Last Name:" />
               </div>
               <div className="flex flex-col md:flex-row gap-2 items-start">
                 {/* Label */}
-                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                <label className="w-full md:w-[60%] text-xs font-semibold text-[#010d4a] whitespace-nowrap">
                   SSN:
                 </label>
                 <FieldInput className="w-full" label="SSN:" />
               </div>
               <div className="flex flex-col md:flex-row gap-2 items-start">
                 {/* Label */}
-                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                <label className="w-full md:w-[60%] text-xs font-semibold text-[#010d4a] whitespace-nowrap">
                   Payroll Number:
                 </label>
                 <FieldInput className="w-full" label="Payroll Number:" />
               </div>
               <div className="flex flex-col md:flex-row gap-2 items-start">
                 {/* Label */}
-                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                <label className="w-full md:w-[60%] text-xs font-semibold text-[#010d4a] whitespace-nowrap">
                   National Number:
                 </label>
                 <FieldInput className="w-full" label="National Number:" />
               </div>
               <div className="flex flex-col md:flex-row gap-2 items-start">
                 {/* Label */}
-                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                <label className="w-full md:w-[60%] text-xs font-semibold text-[#010d4a] whitespace-nowrap">
                   Badge #:
                 </label>
                 <FieldInput className="w-full" label="Badge #:" />
               </div>
               <div className="flex flex-col md:flex-row gap-2 items-start">
                 {/* Label */}
-                <label className="w-full md:w-[60%] text-sm font-semibold text-[#010d4a] whitespace-nowrap">
+                <label className="w-full md:w-[60%] text-xs font-semibold text-[#010d4a] whitespace-nowrap">
                   Emblem #:
                 </label>
                 <FieldInput className="w-full" label="Emblem #:" />

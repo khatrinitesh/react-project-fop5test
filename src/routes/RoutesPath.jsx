@@ -46,6 +46,7 @@ import CityExportFile from "../pages/modules/CityExportFile";
 import Member from "../pages/new/member";
 import OnePhillyIssue from "../pages/new/OnePhillyIssue";
 import LegalMattersSearch from "../pages/new/LegalMattersSearch";
+import Task from "../pages/new/Task";
 
 // ✅ Helper component for protected routes
 const PrivateRoute = ({ children }) => {
@@ -117,6 +118,16 @@ const RoutesPath = () => {
             <PrivateRoute>
               <DashboardLayout>
                 <LegalMattersSearch />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/new/task"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <Task />
               </DashboardLayout>
             </PrivateRoute>
           }
