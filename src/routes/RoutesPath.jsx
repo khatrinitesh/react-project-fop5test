@@ -47,6 +47,10 @@ import Member from "../pages/new/member";
 import OnePhillyIssue from "../pages/new/OnePhillyIssue";
 import LegalMattersSearch from "../pages/new/LegalMattersSearch";
 import Task from "../pages/new/Task";
+import ProductTracking from "../pages/new/ProductTracking";
+import MeetingSearch from "../pages/new/MeetingSearch";
+import Interview from "../pages/new/Interview";
+import Announcement from "../pages/new/Announcement";
 
 // ✅ Helper component for protected routes
 const PrivateRoute = ({ children }) => {
@@ -128,6 +132,46 @@ const RoutesPath = () => {
             <PrivateRoute>
               <DashboardLayout>
                 <Task />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/new/product-tracking"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <ProductTracking />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/new/meeting-search"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <MeetingSearch />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/new/interview"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <Interview />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/new/announcement"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <Announcement />
               </DashboardLayout>
             </PrivateRoute>
           }
