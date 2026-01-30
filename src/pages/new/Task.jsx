@@ -76,14 +76,14 @@ const Task = () => {
 
               <div>
                 <label className="text-xs font-semibold">Priority:</label>
-                <select className="w-full border border-gray-300 mt-1 px-2 py-1 bg-white">
+                <select className="h-[35px] w-full border border-gray-300 mt-1 px-2 py-1 bg-white">
                   <option>High</option>
                 </select>
               </div>
 
               <div>
                 <label className="text-xs font-semibold">Type:</label>
-                <select className="w-full border border-gray-300 mt-1 px-2 py-1 bg-white">
+                <select className="h-[35px] w-full border border-gray-300 mt-1 px-2 py-1 bg-white">
                   <option>To-Do Item</option>
                 </select>
               </div>
@@ -120,14 +120,14 @@ const Task = () => {
 
               <div>
                 <label className="text-xs font-semibold">Pay Period:</label>
-                <select className="w-full border border-gray-300 mt-1 px-2 py-1 bg-white">
+                <select className="h-[35px] w-full border border-gray-300 mt-1 px-2 py-1 bg-white">
                   <option>Select</option>
                 </select>
               </div>
             </div>
           </div>
           {/* 🔷 SAVE BUTTON BAR */}
-          <div className="p-4 ">
+          <div className="py-4">
             <Button
               label="Save Task"
               className="!mx-0"

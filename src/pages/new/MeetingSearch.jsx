@@ -31,10 +31,10 @@ const MeetingSearch = () => {
     console.log("Add Meeting", form.newMeetingName, form.newMeetingDate);
   return (
     <div className="min-h-screen bg-[#dfe8f6] p-4">
-      <div className="max-w-[1300px] mx-auto flex gap-4">
+      <div className="max-w-[1300px] mx-auto md:flex-row flex-col flex gap-4">
         {/* 🔷 LEFT PANEL — ADD NEW MEETING */}
-        <div className="w-[220px] bg-white border border-gray-400 ">
-          <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2 flex items-center gap-2">
+        <div className="md:-[220px] bg-white border border-gray-300 ">
+          <div className="bg-[#1b7398]  px-4 py-2 flex items-center gap-2">
             <h3 className="text-md font-bold text-white">Add New Meeting</h3>
           </div>
 
@@ -73,13 +73,13 @@ const MeetingSearch = () => {
         {/* 🔷 MAIN CONTENT */}
         <div className="flex-1 border border-gray-300 bg-white">
           {/* Header */}
-          <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2 flex items-center gap-2">
+          <div className="bg-[#1b7398]  px-4 py-2 flex items-center gap-2">
             <span className="text-xl">🔍</span>
             <h2 className="text-md font-bold text-white">Meetings Search</h2>
           </div>
 
           {/* Search Filters */}
-          <div className="p-6 bg-[#f7f7f7] border-b border-gray-300">
+          <div className="p-6 bg-white ">
             <div className="grid md:grid-cols-4 gap-6 text-sm items-end">
               <div>
                 <label className="text-xs font-semibold">Name:</label>

@@ -76,7 +76,7 @@ const Member = () => {
 
             <div>
               <label className="font-semibold text-xs">District:</label>
-              <select className="w-full border border-gray-400 mt-1 px-2 py-1">
+              <select className="h-[35px] w-full border border-gray-300 mt-1 px-2 py-1">
                 <option>All</option>
               </select>
             </div>
@@ -100,14 +100,14 @@ const Member = () => {
             {/* Row 3 */}
             <div>
               <label className="font-semibold text-xs">Status:</label>
-              <select className="w-full border border-gray-400 mt-1 px-2 py-1">
+              <select className="h-[35px] w-full border border-gray-300 mt-1 px-2 py-1">
                 <option>All</option>
               </select>
             </div>
 
             <div>
               <label className="font-semibold text-xs">Type:</label>
-              <select className="w-full border border-gray-400 mt-1 px-2 py-1">
+              <select className="h-[35px] w-full border border-gray-300 mt-1 px-2 py-1">
                 <option>All</option>
               </select>
             </div>
@@ -147,7 +147,7 @@ const Member = () => {
 
             <div>
               <label className="font-semibold text-xs">State:</label>
-              <select className="w-full border border-gray-400 mt-1 px-2 py-1">
+              <select className="h-[35px] w-full border border-gray-300 mt-1 px-2 py-1">
                 <option>Select</option>
               </select>
             </div>

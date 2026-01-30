@@ -61,14 +61,14 @@ const LegalMattersSearch = () => {
 
               <div>
                 <label className="font-semibold text-xs">Status:</label>
-                <select className="w-full border outline-none bg-white border-gray-300 mt-1 px-2 py-1">
+                <select className="h-[35px] w-full border outline-none bg-white border-gray-300 mt-1 px-2 py-1">
                   <option>All</option>
                 </select>
               </div>
 
               <div>
                 <label className="font-semibold text-xs">Matter type:</label>
-                <select className="w-full border outline-none bg-white border-gray-300 mt-1 px-2 py-1">
+                <select className="h-[35px] w-full border outline-none bg-white border-gray-300 mt-1 px-2 py-1">
                   <option>All</option>
                 </select>
               </div>

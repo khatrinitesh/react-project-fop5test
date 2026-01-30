@@ -32,10 +32,10 @@ const Interview = () => {
     console.log("Add Interview", form.newInterviewName, form.newInterviewDate);
   return (
     <div className="min-h-screen bg-[#dfe8f6] p-4">
-      <div className="max-w-[1300px] mx-auto flex gap-4">
+      <div className="max-w-[1300px] mx-auto md:flex-row flex-col flex gap-4">
         {/* 🔷 LEFT PANEL — ADD NEW INTERVIEW */}
-        <div className="w-[220px] bg-white border border-gray-400">
-          <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2">
+        <div className="md:w-[220px] bg-white border border-gray-300">
+          <div className="bg-[#1b7398]  px-4 py-2">
             <h3 className="text-md font-bold text-white">Add New Interview</h3>
           </div>
 
@@ -82,7 +82,7 @@ const Interview = () => {
           </div>
 
           {/* Search Filters */}
-          <div className="p-6 bg-[#f3f3f3] border-b border-gray-300">
+          <div className="p-6 bg-white border-b border-gray-300">
             <div className="grid md:grid-cols-4 gap-6 text-sm items-end">
               <div>
                 <label className="text-xs font-semibold">Name:</label>
