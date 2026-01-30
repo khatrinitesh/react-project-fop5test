@@ -32,7 +32,7 @@ const Interview = () => {
     console.log("Add Interview", form.newInterviewName, form.newInterviewDate);
   return (
     <div className="min-h-screen bg-[#dfe8f6] p-4">
-      <div className="max-w-[1300px] mx-auto md:flex-row flex-col flex gap-4">
+      <div className="mx-auto md:flex-row flex-col flex gap-4">
         {/* 🔷 LEFT PANEL — ADD NEW INTERVIEW */}
         <div className="md:w-[220px] bg-white border border-gray-300">
           <div className="bg-[#1b7398]  px-4 py-2">

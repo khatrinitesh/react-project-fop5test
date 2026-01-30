@@ -7,7 +7,7 @@ const OnePhillyIssue = () => {
   const handleClose = () => console.log("Close clicked");
   return (
     <div className="min-h-screen bg-[#e6edf7] p-4">
-      <div className="max-w-[1100px] mx-auto border border-gray-400 bg-white shadow-sm">
+      <div className="mx-auto border border-gray-400 bg-white shadow-sm">
         {/* 🔷 Header */}
         <div className="bg-[#1b7398] border-b border-gray-400 px-4 py-2 flex items-center gap-2">
           <span className="text-2xl">🔎</span>

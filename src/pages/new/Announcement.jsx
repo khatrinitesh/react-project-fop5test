@@ -18,7 +18,7 @@ const Announcement = () => {
   const handleSearch = () => console.log("Search Announcement");
   return (
     <div className="min-h-screen bg-[#dfe8f6] p-4">
-      <div className="max-w-[1300px] mx-auto flex gap-4">
+      <div className=" mx-auto flex gap-4">
         {/* 🔷 MAIN CONTENT */}
         <div className="flex-1 border border-gray-300 bg-white">
           {/* Header */}

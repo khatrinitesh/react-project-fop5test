@@ -51,6 +51,14 @@ import ProductTracking from "../pages/new/ProductTracking";
 import MeetingSearch from "../pages/new/MeetingSearch";
 import Interview from "../pages/new/Interview";
 import Announcement from "../pages/new/Announcement";
+import MembersSearch from "../pages/search/MembersSearch";
+import OnePhillySearch from "../pages/search/OnePhillySearch";
+import LegalMattersSearch2 from "../pages/search/LegalMattersSearch2";
+import TaskSearch from "../pages/search/TaskSearch";
+import ProductSearch from "../pages/search/ProductSearch";
+import MeetingSearch2 from "./../pages/search/MeetingSearch2";
+import InterviewSearch from "../pages/search/InterviewSearch";
+import AnnouncementsSearch from "../pages/search/AnnouncementsSearch";
 
 // ✅ Helper component for protected routes
 const PrivateRoute = ({ children }) => {
@@ -172,6 +180,91 @@ const RoutesPath = () => {
             <PrivateRoute>
               <DashboardLayout>
                 <Announcement />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/search/members-search"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <MembersSearch />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/search/one-philly-search"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <OnePhillySearch />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/search/legal-matters-search-2"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <LegalMattersSearch2 />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/search/task-search"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <TaskSearch />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/search/product-search"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <ProductSearch />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/search/meeting-search"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <MeetingSearch2 />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/search/interview-search"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <InterviewSearch />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/search/announcement-search"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <AnnouncementsSearch />
               </DashboardLayout>
             </PrivateRoute>
           }

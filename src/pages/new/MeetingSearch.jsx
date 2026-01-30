@@ -31,7 +31,7 @@ const MeetingSearch = () => {
     console.log("Add Meeting", form.newMeetingName, form.newMeetingDate);
   return (
     <div className="min-h-screen bg-[#dfe8f6] p-4">
-      <div className="max-w-[1300px] mx-auto md:flex-row flex-col flex gap-4">
+      <div className=" mx-auto md:flex-row flex-col flex gap-4">
         {/* 🔷 LEFT PANEL — ADD NEW MEETING */}
         <div className="md:-[220px] bg-white border border-gray-300 ">
           <div className="bg-[#1b7398]  px-4 py-2 flex items-center gap-2">

@@ -24,7 +24,7 @@ const ProductTracking = () => {
   const handleCancel = () => console.log("Cancelled");
   return (
     <div className="min-h-screen bg-[#dfe8f6] p-4">
-      <div className="max-w-[1300px] mx-auto flex gap-4">
+      <div className=" mx-auto flex gap-4">
         {/* 🔷 LEFT ACTION PANEL */}
 
         {/* 🔷 MAIN CONTENT */}
