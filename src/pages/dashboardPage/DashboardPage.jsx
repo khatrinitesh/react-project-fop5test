@@ -28,8 +28,8 @@ const DashboardPage = () => {
   };
   return (
     <>
-      <div className="p-5 bg-[#e6edf7] ">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6">
+      <div className="p-5 bg-[#e6edf7] h-full">
+        <div className="mx-auto grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6">
           {/* LEFT SIDEBAR */}
           <div className="space-y-4">
             {/* Messages Box */}

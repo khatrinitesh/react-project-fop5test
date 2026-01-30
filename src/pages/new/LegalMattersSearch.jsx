@@ -8,7 +8,7 @@ const LegalMattersSearch = () => {
   const handleAdd = () => console.log("Add Legal Matter clicked");
   return (
     <div className="min-h-screen bg-[#e6edf7] p-4">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-4">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-4">
         {/* ================= LEFT PANEL ================= */}
         <div className="bg-[#fff] border border-gray-300 ">
           <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2 flex items-center gap-2">

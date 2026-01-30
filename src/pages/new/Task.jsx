@@ -44,7 +44,7 @@ const Task = () => {
   };
   return (
     <div className="min-h-screen bg-[#e6edf7] p-4">
-      <div className="max-w-[1200px] mx-auto border border-gray-300 bg-white">
+      <div className="mx-auto border border-gray-300 bg-white">
         {/* 🔷 HEADER */}
         <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2 flex items-center gap-2">
           <span className="text-green-600 text-xl">✔</span>

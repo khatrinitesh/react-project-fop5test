@@ -20,8 +20,8 @@ const Member = () => {
   };
 
   return (
-    <div className="p-5 bg-[#e6edf7] min-h-screen">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-4">
+    <div className="p-5 bg-[#e6edf7] min-h-screen ">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-4">
         {/* ================= LEFT PANEL ================= */}
         <div className="bg-[#fff] border border-gray-300">
           <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2 flex items-center gap-2">
