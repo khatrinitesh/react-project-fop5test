@@ -111,12 +111,12 @@ export const sidebarNavigation = [
           {
             label: "Add User",
             icon: FaUserPlus,
-            path: "/admin/users/add",
+            path: "/admin/users/add-users",
           },
           {
             label: "Search Users",
             icon: FaUserAlt,
-            path: "/admin/users/search",
+            path: "/admin/users/search-users",
           },
         ],
       },
@@ -130,7 +130,7 @@ export const sidebarNavigation = [
       {
         label: "Role Permissions",
         icon: FaKey,
-        path: "/admin/role-permissions",
+        path: "/admin/manage-role-permissions",
       },
 
       {

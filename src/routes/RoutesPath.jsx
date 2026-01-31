@@ -59,6 +59,13 @@ import ProductSearch from "../pages/search/ProductSearch";
 import MeetingSearch2 from "./../pages/search/MeetingSearch2";
 import InterviewSearch from "../pages/search/InterviewSearch";
 import AnnouncementsSearch from "../pages/search/AnnouncementsSearch";
+import MySettings from "../pages/admin/MySettings";
+import AddUser from "../pages/admin/AddUser";
+import SearchUser from "../pages/admin/SearchUser";
+import SecurityRoles from "../pages/admin/SecurityRoles";
+import ManageRolePersmissions from "../pages/admin/ManageRolePersmissions";
+import Flags from "../pages/admin/Flags";
+import MFASettings from "../pages/admin/MFASettings";
 
 // ✅ Helper component for protected routes
 const PrivateRoute = ({ children }) => {
@@ -184,7 +191,6 @@ const RoutesPath = () => {
             </PrivateRoute>
           }
         />
-
         <Route
           path="/search/members-search"
           element={
@@ -195,7 +201,6 @@ const RoutesPath = () => {
             </PrivateRoute>
           }
         />
-
         <Route
           path="/search/one-philly-search"
           element={
@@ -236,7 +241,6 @@ const RoutesPath = () => {
             </PrivateRoute>
           }
         />
-
         <Route
           path="/search/meeting-search"
           element={
@@ -247,7 +251,6 @@ const RoutesPath = () => {
             </PrivateRoute>
           }
         />
-
         <Route
           path="/search/interview-search"
           element={
@@ -258,13 +261,82 @@ const RoutesPath = () => {
             </PrivateRoute>
           }
         />
-
         <Route
           path="/search/announcement-search"
           element={
             <PrivateRoute>
               <DashboardLayout>
                 <AnnouncementsSearch />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/my-settings"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <MySettings />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/users/add-users"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <AddUser />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/users/search-users"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <SearchUser />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/security-roles"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <SecurityRoles />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/manage-role-permissions"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <ManageRolePersmissions />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/flags"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <Flags />
+              </DashboardLayout>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/mfa-settings"
+          element={
+            <PrivateRoute>
+              <DashboardLayout>
+                <MFASettings />
               </DashboardLayout>
             </PrivateRoute>
           }

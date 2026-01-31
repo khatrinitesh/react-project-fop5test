@@ -89,7 +89,7 @@ const LegalMattersSearch2 = () => {
             </div>
           </div>
           {/* Buttons aligned right like screenshot */}
-          <div className="flex items-end gap-3 px-5">
+          <div className="flex items-end gap-3 px-5 py-3">
             <Button
               label="Search"
               onClick={handleSearch}
