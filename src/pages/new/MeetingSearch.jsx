@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../../components/button/Button";
 import FieldInput from "../../components/fieldInput/FieldInput";
+import DatePickerComponent from "../../components/datepickerComponent/DatepickerComponent";
 
 const MeetingSearch = () => {
   const [form, setForm] = useState({
@@ -11,6 +12,7 @@ const MeetingSearch = () => {
     newMeetingName: "",
     newMeetingDate: "",
   });
+  const [date, setDate] = useState(null);
 
   const handleChange = (key, value) => {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -50,13 +52,11 @@ const MeetingSearch = () => {
 
             <div>
               <label className="text-xs font-semibold">Date:</label>
-              <div className="flex items-center gap-2 mt-1">
-                <FieldInput
-                  type="date"
-                  value={form.newMeetingDate}
-                  onChange={(e) =>
-                    handleChange("newMeetingDate", e.target.value)
-                  }
+              <div className="flex items-center gap-2 mt-1 customDatepicker">
+                <DatePickerComponent
+                  value={date}
+                  onChange={setDate}
+                  className="w-full"
                 />
                 📅
               </div>
@@ -92,11 +92,11 @@ const MeetingSearch = () => {
 
               <div>
                 <label className="text-xs font-semibold">Date from:</label>
-                <div className="flex items-center gap-2 mt-1">
-                  <FieldInput
-                    type="date"
-                    value={form.dateFrom}
-                    onChange={(e) => handleChange("dateFrom", e.target.value)}
+                <div className="flex items-center gap-2 mt-1 customDatepicker">
+                  <DatePickerComponent
+                    value={date}
+                    onChange={setDate}
+                    className="w-full"
                   />
                   📅
                 </div>
@@ -104,11 +104,11 @@ const MeetingSearch = () => {
 
               <div>
                 <label className="text-xs font-semibold">Date to:</label>
-                <div className="flex items-center gap-2 mt-1">
-                  <FieldInput
-                    type="date"
-                    value={form.dateTo}
-                    onChange={(e) => handleChange("dateTo", e.target.value)}
+                <div className="flex items-center gap-2 mt-1 customDatepicker">
+                  <DatePickerComponent
+                    value={date}
+                    onChange={setDate}
+                    className="w-full"
                   />
                   📅
                 </div>

@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import FieldInput from "../../components/fieldInput/FieldInput";
 import Button from "../../components/button/Button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import DatePickerComponent from "../../components/datepickerComponent/DatepickerComponent";
 
 const Label = ({ children }) => (
   <label className="text-[12px] font-semibold text-gray-700 mb-1">
@@ -17,6 +18,7 @@ const Select = ({ children }) => (
 
 const TaskSearch = () => {
   const navigate = useNavigate();
+  const [date, setDate] = useState(null);
 
   useEffect(() => {
     const isAuth = localStorage.getItem("isAuthenticated");
@@ -83,7 +85,14 @@ const TaskSearch = () => {
 
           <div>
             <Label>Close Date:</Label>
-            <FieldInput type="date" className="w-full" />
+            <div className="flex items-center gap-2 mt-1 customDatepicker">
+              <DatePickerComponent
+                value={date}
+                onChange={setDate}
+                className="w-full"
+              />
+              📅
+            </div>
           </div>
 
           <div></div>
@@ -91,12 +100,26 @@ const TaskSearch = () => {
           {/* Row 3 */}
           <div>
             <Label>Create Date:</Label>
-            <FieldInput type="date" className="w-full" />
+            <div className="flex items-center gap-2 mt-1 customDatepicker">
+              <DatePickerComponent
+                value={date}
+                onChange={setDate}
+                className="w-full"
+              />
+              📅
+            </div>
           </div>
 
           <div>
             <Label>Due Date:</Label>
-            <FieldInput type="date" className="w-full" />
+            <div className="flex items-center gap-2 mt-1 customDatepicker">
+              <DatePickerComponent
+                value={date}
+                onChange={setDate}
+                className="w-full"
+              />
+              📅
+            </div>
           </div>
 
           <div>

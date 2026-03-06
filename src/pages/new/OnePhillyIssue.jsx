@@ -1,3 +1,5 @@
+import { useState } from "react";
+import DatePickerComponent from "../../components/datepickerComponent/DatepickerComponent";
 import Button from "./../../components/button/Button";
 import FieldInput from "./../../components/fieldInput/FieldInput";
 
@@ -5,6 +7,7 @@ const OnePhillyIssue = () => {
   const handleSave = () => console.log("Save clicked");
   const handleClear = () => console.log("Clear clicked");
   const handleClose = () => console.log("Close clicked");
+  const [date, setDate] = useState(null);
   return (
     <div className="min-h-screen bg-[#e6edf7] p-4">
       <div className="mx-auto border border-gray-400 bg-white shadow-sm">
@@ -33,8 +36,12 @@ const OnePhillyIssue = () => {
             <FieldInput className="w-[250px]" />
 
             <label className="font-semibold text-xs text-left">Date:</label>
-            <div className="flex items-center gap-2">
-              <FieldInput className="w-[200px]" type="date" />
+            <div className="flex items-center gap-2 customDatepicker">
+              <DatePickerComponent
+                value={date}
+                onChange={setDate}
+                className="w-full"
+              />
               <span className="text-lg">📅</span>
             </div>
 

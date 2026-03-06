@@ -231,3 +231,8 @@ input[type="date"]::-moz-placeholder {
 /* .calendar-grid .calendar-day:last-child {
   border-bottom: 1px solid #ccc !important;
 } */
+
+.customDatepicker > div,
+.customDatepicker .react-datepicker-wrapper {
+  width: 100%;
+}

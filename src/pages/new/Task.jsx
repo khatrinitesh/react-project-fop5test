@@ -1,10 +1,11 @@
 import { useState } from "react";
 import FieldInput from "../../components/fieldInput/FieldInput";
 import Button from "../../components/button/Button";
+import DatePickerComponent from "../../components/datepickerComponent/DatepickerComponent";
 
 const Task = () => {
   const [activeTab, setActiveTab] = useState("notes");
-
+  const [date, setDate] = useState(null);
   const handleSave = () => console.log("Save clicked");
 
   const renderTab = () => {
@@ -90,16 +91,24 @@ const Task = () => {
 
               <div>
                 <label className="text-xs font-semibold">Start Date:</label>
-                <div className="flex items-center gap-2 mt-1">
-                  <FieldInput className="w-[180px]" type="date" />
+                <div className="flex items-center gap-2 mt-1 customDatepicker">
+                  <DatePickerComponent
+                    value={date}
+                    onChange={setDate}
+                    className="w-full"
+                  />
                   📅
                 </div>
               </div>
 
               <div>
                 <label className="text-xs font-semibold">Due Date:</label>
-                <div className="flex items-center gap-2 mt-1">
-                  <FieldInput className="w-[180px]" type="date" />
+                <div className="flex items-center gap-2 mt-1 customDatepicker">
+                  <DatePickerComponent
+                    value={date}
+                    onChange={setDate}
+                    className="w-full"
+                  />
                   📅
                 </div>
               </div>

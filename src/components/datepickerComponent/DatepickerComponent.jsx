@@ -2,25 +2,37 @@ import React, { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const DatePickerComponent = ({ onDateChange }) => {
+const DatePickerComponent = ({ onDateChange, borderVariant = "gray" }) => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   const handleChange = (date) => {
     setSelectedDate(date);
+
     if (onDateChange) {
       onDateChange(date);
     }
   };
+
+  const borderClass =
+    borderVariant === "blue" ? "border-[#1b7398]" : "border-[#ccc]";
 
   return (
     <div>
       <ReactDatePicker
         selected={selectedDate}
         onChange={handleChange}
-        dateFormat="MMMM yyyy"
-        showMonthYearPicker
-        placeholderText="Select month & year"
-        className="border border-gray-300 rounded px-2 py-1"
+        dateFormat="dd-MMM-yyyy"
+        placeholderText="dd-mmm-yyyy"
+        className={`
+          w-full
+          h-[35px]
+          outline-none
+          px-2
+          border
+          ${borderClass}
+          bg-white
+          text-sm
+        `}
       />
     </div>
   );

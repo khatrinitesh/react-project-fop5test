@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FieldInput from "../../components/fieldInput/FieldInput";
 import Button from "../../components/button/Button";
+import DatePickerComponent from "../../components/datepickerComponent/DatepickerComponent";
 
 const Announcement = () => {
   const [form, setForm] = useState({
@@ -9,6 +10,7 @@ const Announcement = () => {
     content: "",
     visibility: "everyone",
   });
+  const [date, setDate] = useState(null);
 
   const handleChange = (key, value) => {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -44,13 +46,13 @@ const Announcement = () => {
               <label className="block text-xs font-semibold mb-1">
                 Expiration:
               </label>
-              <div className="flex items-center gap-2 max-w-[250px]">
-                <FieldInput
-                  type="date"
-                  value={form.expiration}
-                  onChange={(e) => handleChange("expiration", e.target.value)}
+              <div className="flex items-center gap-2 mt-1 ">
+                <DatePickerComponent
+                  value={date}
+                  onChange={setDate}
+                  className="w-[200px]"
                 />
-                <span className="text-lg">📅</span>
+                📅
               </div>
             </div>
 

@@ -3,6 +3,7 @@ import Button from "../../components/button/Button";
 import FieldInput from "./../../components/fieldInput/FieldInput";
 import SectionTitleComponent from "../../components/sectionTitleComponent/SectionTitleComponent";
 import { FaRegFile } from "react-icons/fa";
+import DatePickerComponent from "../../components/datepickerComponent/DatepickerComponent";
 
 const AddOrderPayment = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const AddOrderPayment = () => {
     method: "Credit Card",
     orderId: "",
   });
+  const [date, setDate] = useState(null);
 
   const paymentMethods = ["Credit Card", "Cash", "Check", "Wire Transfer"]; // example options
 
@@ -51,15 +53,14 @@ const AddOrderPayment = () => {
                 Date of Receipt:
               </label>
               <div className="w-3/4">
-                <FieldInput
-                  id="dateOfReceipt"
-                  name="dateOfReceipt"
-                  type="date"
-                  value={formData.dateOfReceipt}
-                  onChange={handleChange}
-                  className=""
-                  borderVariant="gray"
-                />
+                <div className="flex items-center gap-2 mt-1 customDatepicker">
+                  <DatePickerComponent
+                    value={date}
+                    onChange={setDate}
+                    className="w-full"
+                  />
+                  📅
+                </div>
               </div>
             </div>
 

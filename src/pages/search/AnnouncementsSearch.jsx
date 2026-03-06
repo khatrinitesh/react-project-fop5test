@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import FieldInput from "../../components/fieldInput/FieldInput";
 import Button from "../../components/button/Button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import DatePickerComponent from "../../components/datepickerComponent/DatepickerComponent";
 
 const SectionHeader = ({ title }) => (
   <div className="bg-[#1b7398] border-b border-gray-300 px-4 py-2 flex items-center gap-2">
@@ -18,6 +19,7 @@ const Label = ({ children }) => (
 
 const AnnouncementsSearch = () => {
   const navigate = useNavigate();
+  const [date, setDate] = useState(null);
 
   useEffect(() => {
     const isAuth = localStorage.getItem("isAuthenticated");
@@ -40,11 +42,13 @@ const AnnouncementsSearch = () => {
 
             <div>
               <Label>Expiration Date:</Label>
-              <div className="flex items-center gap-2 mt-1">
-                <FieldInput className="flex-1 " />
-                <button className="border border-gray-400 bg-white px-1">
-                  📅
-                </button>
+              <div className="flex items-center gap-2 mt-1 customDatepicker">
+                <DatePickerComponent
+                  value={date}
+                  onChange={setDate}
+                  className="w-full"
+                />
+                📅
               </div>
             </div>
 
@@ -60,18 +64,26 @@ const AnnouncementsSearch = () => {
             {/* Row 1 */}
             <Label>From Date:</Label>
             <div className="flex items-center gap-1">
-              <FieldInput className=" w-full" />
-              <button className="border border-gray-400 bg-white px-1">
+              <div className="flex items-center gap-2 mt-1 customDatepicker">
+                <DatePickerComponent
+                  value={date}
+                  onChange={setDate}
+                  className="w-full"
+                />
                 📅
-              </button>
+              </div>
             </div>
 
             <Label>To Date:</Label>
             <div className="flex items-center gap-1">
-              <FieldInput className=" w-full" />
-              <button className="border border-gray-400 bg-white px-1">
+              <div className="flex items-center gap-2 mt-1 customDatepicker">
+                <DatePickerComponent
+                  value={date}
+                  onChange={setDate}
+                  className="w-full"
+                />
                 📅
-              </button>
+              </div>
             </div>
 
             <div className="flex gap-4 justify-end">
